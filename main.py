@@ -16,3 +16,10 @@ intents = discord.Intents.default()
 intents.members = True
 
 bot = commands.Bot(command_prefix='$', help_command=None, intents=intents)
+client = discord.Client()
+
+@client.event()
+async def on_ready():
+    print('OwO')
+
+bot.run(TOKEN)
