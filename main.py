@@ -18,8 +18,10 @@ intents.members = True
 bot = commands.Bot(command_prefix='$', help_command=None, intents=intents)
 client = discord.Client()
 
-@client.event()
+
+@client.event
 async def on_ready():
-    print('OwO')
+    print(f'{client.user} has connected to Discord!')
+
 
 bot.run(TOKEN)
